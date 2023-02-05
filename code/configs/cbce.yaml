@@ -1,0 +1,5 @@
+LOGNAME: 'LT_cbce_2.log'
+MODELDIR: 'LT_cbce'
+MODELNAME: 'LongTailModel_cbce'
+LOSS:
+  LOSS_TYPE: 'ClassBalanceCE'

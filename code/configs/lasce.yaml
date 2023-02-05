@@ -1,0 +1,5 @@
+LOGNAME: 'LT_lasce_2.log'
+MODELDIR: 'LT_lasce'
+MODELNAME: 'LongTailModel_lasce'
+LOSS:
+  LOSS_TYPE: 'CrossEntropyLabelAwareSmooth'

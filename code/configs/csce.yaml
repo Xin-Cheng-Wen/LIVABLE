@@ -1,0 +1,5 @@
+LOGNAME: 'LT_csce_2.log'
+MODELDIR: 'LT_csce'
+MODELNAME: 'LongTailModel_csce'
+LOSS:
+  LOSS_TYPE: 'CostSensitiveCE'

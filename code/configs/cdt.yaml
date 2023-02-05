@@ -1,0 +1,5 @@
+LOGNAME: 'LT_cdt_2.log'
+MODELDIR: 'LT_cdt'
+MODELNAME: 'LongTailModel_cdt'
+LOSS:
+  LOSS_TYPE: 'CDT'

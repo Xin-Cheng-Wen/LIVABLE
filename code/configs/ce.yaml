@@ -1,0 +1,5 @@
+LOGNAME: 'LT_ce_2.log'
+MODELDIR: 'LT_ce'
+MODELNAME: 'LongTailModel_ce'
+LOSS:
+  LOSS_TYPE: 'CrossEntropy'

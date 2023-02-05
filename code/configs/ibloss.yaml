@@ -1,0 +1,5 @@
+LOGNAME: 'LT_ibloss.log'
+MODELDIR: 'LT_ibloss'
+MODELNAME: 'LongTailModel_ibloss'
+LOSS:
+  LOSS_TYPE: 'InfluenceBalancedLoss'

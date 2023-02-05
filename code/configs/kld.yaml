@@ -1,0 +1,5 @@
+LOGNAME: 'LT_kld.log'
+MODELDIR: 'LT_kld'
+MODELNAME: 'LongTailModel_kld'
+LOSS:
+  LOSS_TYPE: 'DiVEKLD'

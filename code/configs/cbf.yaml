@@ -1,0 +1,5 @@
+LOGNAME: 'LT_cbf_2.log'
+MODELDIR: 'LT_cbf'
+MODELNAME: 'LongTailModel_cbf'
+LOSS:
+  LOSS_TYPE: 'ClassBalanceFocal'

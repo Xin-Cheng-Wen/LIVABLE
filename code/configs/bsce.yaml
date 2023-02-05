@@ -1,0 +1,5 @@
+LOGNAME: 'LT_bsce_2.log'
+MODELDIR: 'LT_bsce'
+MODELNAME: 'LongTailModel_bsce'
+LOSS:
+  LOSS_TYPE: 'BalancedSoftmaxCE'

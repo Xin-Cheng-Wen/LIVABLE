@@ -1,0 +1,5 @@
+LOGNAME: 'LT_ldam_2.log'
+MODELDIR: 'LT_ldam'
+MODELNAME: 'LongTailModel_ldam'
+LOSS:
+  LOSS_TYPE: 'LDAMLoss'

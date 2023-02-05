@@ -1,0 +1,5 @@
+LOGNAME: 'LT_focal_2.log'
+MODELDIR: 'LT_focal'
+MODELNAME: 'LongTailModel_focal'
+LOSS:
+  LOSS_TYPE: 'FocalLoss'
