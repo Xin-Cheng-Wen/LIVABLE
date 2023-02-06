@@ -44,11 +44,11 @@ We use Joern to generate the code structure graph and we provide a compiled vers
 
 ## Running the model
 
-The model implementation code is under the ` code\` folder. The model can be runned from `code\main_sta.py`.
+The model implementation code is under the `code\` folder. The model can be runned from `code\main_sta.py`.
 
 ## Figure
 
-We put the figures in ` figure\` folder
+We put the figures in `figure\` folder
 
 ## References
 
