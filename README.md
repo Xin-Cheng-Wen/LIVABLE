@@ -1,24 +1,60 @@
-# LIVABLE - Implementation
+<div align="center">
+    <p>
+    <h1>
+    LIVABLE - Implementation
+    </h1>
+    <a href="https://github.com/ddlBoJack/MT4SSL"><img src="https://img.shields.io/badge/Platform-linux-lightgrey" alt="version"></a>
+    <a href="https://github.com/ddlBoJack/MT4SSL"><img src="https://img.shields.io/badge/Python-3.8+-orange" alt="version"></a>
+    <a href="https://github.com/ddlBoJack/MT4SSL"><img src="https://img.shields.io/badge/License-MIT-red.svg" alt="mit"></a>
+</div>
 
-## LIVABLE: Exploring Long-Tailed Classification of Software Vulnerability Types
 
-## Introduction
+## 📥 Guides
 
-Prior studies generally focus on software vulnerability detection and have demonstrated the effectiveness of Graph Neural Network (GNN)-based approaches for the task. Considering the various types of software vulnerabilities and the associated different degrees of severity, it is also beneficial to determine the type of each vulnerable code for developers. In this paper, we observe that the distribution of vulnerability types is long-tailed in practice, where a small portion of classes have massive samples (i.e., head classes) but the others contain only a few samples (i.e., tail classes). Directly adopting previous vulnerability detection approaches tends to result in poor detection performance, mainly due to two reasons. First, it is difficult to effectively learn the vulnerability representation due to the over-smoothing issue of GNNs. Second, vulnerability types in tails are hard to be predicted due to the extremely few associated samples. 
+#### 1、Preprocessing
 
-To alleviate these issues, we propose a long-tailed software vulnerability type classification approach, called LIVABLE. LIVABLE mainly consists of two modules, including (1) vulnerability representation learning module, which improves the propagation steps in GNN to distinguish node representations by a differentiated propagation method. A sequence-to-sequence model is also involved to enhance the vulnerability representations. (2) adaptive re-weighting module, which adjusts the learning weights for different types according to the training epochs and numbers of associated samples by a novel training loss. We verify the effectiveness of LIVABLE in both type classification and vulnerability detection tasks. For vulnerability type classification, the experiments on the Fan et al. dataset show that LIVABLE outperforms the state-of-the-art methods by 24.18% in terms of the accuracy metric, and also improves the performance in predicting tails by 7.7%. To evaluate the efficacy of the vulnerability representation learning module in LIVABLE, we further compare with the recent vulnerability detection approaches on three benchmark datasets, which shows that the proposed representation learning module improves the best baselines by 4.03% on average in terms of accuracy.
+- (1) We download Joern to generate the code structure graph and we provide a compiled version of joern [here](https://zenodo.org/record/7323504#.Y3OQL3ZByUk). 
 
-## Dataset
+- (2) We use the `preprocessing\process.py` to use Joern.
+
+#### 2、Word2Vec
+For each code structure graph, we use the word2vec to initialize the node representation in the graph branch and the token representation
+in the sequence branch.
+
+-  (3) We use the `preprocessing\word2vec_multi.py` to train the word2vec model.
+-  (4) We use the `preprocessing\ori_ourdevign+token.py` to generate the node representation and the token representation.
+  
+
+#### 3、Training the LIVABLE model
+
+- （5）The model implementation code is under the `code\` folder. The model can be runned from `code\main_sta.py`.
+
+## 🚨 Abstract
+
+In this paper, we propose a long-tailed software vulnerability type classification approach, called LIVABLE. LIVABLE mainly consists of two modules, including (1) vulnerability representation learning module, which improves the propagation steps in GNN to distinguish node representations by a differentiated propagation method. A sequence-to-sequence model is also involved to enhance the vulnerability representations. (2) adaptive re-weighting module, which adjusts the learning weights for different types according to the training epochs and numbers of associated samples by a novel training loss. We verify the effectiveness of LIVABLE in both type classification and vulnerability detection tasks. For vulnerability type classification, the experiments on the Fan et al. dataset show that LIVABLE outperforms the state-of-the-art methods by 24.18% in terms of the accuracy metric, and also improves the performance in predicting tails by 7.7%. To evaluate the efficacy of the vulnerability representation learning module in LIVABLE, we further compare with the recent vulnerability detection approaches on three benchmark datasets, which shows that the proposed representation learning module improves the best baselines by 4.03% on average in terms of accuracy.
+
+## 🤯 Dataset
 
 To investigate the effectiveness of LIVABLE in vulnerability detection, we adopt three vulnerability datasets from these paper:
 
-- Fan et al. [1]: https://drive.google.com/file/d/1-0VhnHBp9IGh90s2wCNjeCMuy70HPl8X/view?usp=sharing
-- Reveal [2]: https://drive.google.com/drive/folders/1KuIYgFcvWUXheDhT--cBALsfy1I4utOyF
-- FFMPeg+Qemu [3]: https://drive.google.com/file/d/1x6hoF7G-tSYxg8AFybggypLZgMGDNHfF
+- Fan et al. [1]: 
+```bash
+https://drive.google.com/file/d/1-0VhnHBp9IGh90s2wCNjeCMuy70HPl8X/view?usp=sharing
+```
+
+- Reveal [2]: 
+```bash
+https://drive.google.com/drive/folders/1KuIYgFcvWUXheDhT--cBALsfy1I4utOyF
+```
+
+- FFMPeg+Qemu [3]: 
+```bash
+https://drive.google.com/file/d/1x6hoF7G-tSYxg8AFybggypLZgMGDNHfF
+```
 
 In vulnerability type classification, we extract a new dataset from Fan et al., which is in `data\` folder.
 
-## Requirement
+## 📅 Requirement
 
 Our code is based on Python3 (>= 3.7). There are a few dependencies to run the code. The major libraries are listed as follows:
 
@@ -38,21 +74,9 @@ Our code is based on Python3 (>= 3.7). There are a few dependencies to run the c
   - batch_size = 64, lr = 0.0001, epoch = 50, patience = 20
   - opt ='RAdam', weight_decay=1e-6
 
-## Guides
 
-## Preprocessing
 
-We use Joern to generate the code structure graph and we provide a compiled version of joern [here](https://zenodo.org/record/7323504#.Y3OQL3ZByUk). It should be noted that the AST and graphs generated by different versions of Joern may have significant differences. So if using the newer versions of Joern to generate code structure graph, the model may have a different performance compared with the results we reported in the paper.
-
-## Running the model
-
-The model implementation code is under the `code\` folder. The model can be runned from `code\main_sta.py`.
-
-## Figure
-
-We put the figures in `figure\` folder
-
-## References
+**References**：
 
 [1] Jiahao Fan, Yi Li, Shaohua Wang, and Tien Nguyen. 2020. A C/C++ Code Vulnerability Dataset with Code Changes and CVE Summaries. In The 2020 International Conference on Mining Software Repositories (MSR). IEEE.
 
