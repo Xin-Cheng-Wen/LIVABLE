@@ -13,10 +13,12 @@
 
 #### 1、Preprocessing
 
-- (1) **Joern**: 
+- (1) **Joern**:
+  
   We download Joern to generate the code structure graph and we provide a compiled version of joern [here](https://zenodo.org/record/7323504#.Y3OQL3ZByUk). 
 
-- (2) **Parse**: 
+- (2) **Parse**:
+  
   We use the `preprocessing\process.py` to use Joern.
 
 #### 2、Word2Vec
@@ -24,9 +26,11 @@ For each code structure graph, we use the word2vec to initialize the node repres
 in the sequence branch.
 
 -  (3) **Word2Vec Training**:
+- 
   We use the `preprocessing\word2vec_multi.py` to train the word2vec model.
   
 -  (4) **Node and Token Representation**:
+  
   We use the `preprocessing\ori_ourdevign+token.py` to generate the node representation and the token representation.
   
 
@@ -34,13 +38,14 @@ in the sequence branch.
 
 
 -  (5) **The vulnerability detection model's training configs**:
-  batch_size = 64, lr = 0.0001, epoch = 100, patience = 20
-  opt ='RAdam', weight_decay=1e-6, class_num =2
+  
+  batch_size = 64, lr = 0.0001, epoch = 100, patience = 20, opt ='RAdam', weight_decay=1e-6, class_num =2
 -  (6) **The vulnerability type classification model's training configs**:
   
   batch_size = 64, lr = 0.0001, epoch = 50, patience = 20, opt ='RAdam', weight_decay=1e-6, class_num = 31
 
--  (7) **Model Training**: 
+-  (7) **Model Training**:
+  
 The model implementation code is under the `code\` folder. The model can be runned from `code\main_sta.py`.
 
 ## 🚨 Abstract
