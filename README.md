@@ -36,11 +36,12 @@ in the sequence branch.
 -  (5) **The vulnerability detection model's training configs**:
   batch_size = 64, lr = 0.0001, epoch = 100, patience = 20
   opt ='RAdam', weight_decay=1e-6, class_num =2
--  (6) **The vulnerability type classification model's training configs**: 
+-  (6) **The vulnerability type classification model's training configs**:
+  
   batch_size = 64, lr = 0.0001, epoch = 50, patience = 20, opt ='RAdam', weight_decay=1e-6, class_num = 31
 
 -  (7) **Model Training**: 
-- The model implementation code is under the `code\` folder. The model can be runned from `code\main_sta.py`.
+The model implementation code is under the `code\` folder. The model can be runned from `code\main_sta.py`.
 
 ## 🚨 Abstract
 
