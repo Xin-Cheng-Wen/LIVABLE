@@ -21,13 +21,14 @@
 For each code structure graph, we use the word2vec to initialize the node representation in the graph branch and the token representation
 in the sequence branch.
 
--  (3) We use the `preprocessing\word2vec_multi.py` to train the word2vec model.
--  (4) We use the `preprocessing\ori_ourdevign+token.py` to generate the node representation and the token representation.
+- (3) We use the `preprocessing\word2vec_multi.py` to train the word2vec model.
+- 
+- (4) We use the `preprocessing\ori_ourdevign+token.py` to generate the node representation and the token representation.
   
 
 #### 3、Training the LIVABLE model
 
-- （5）The model implementation code is under the `code\` folder. The model can be runned from `code\main_sta.py`.
+- (5)The model implementation code is under the `code\` folder. The model can be runned from `code\main_sta.py`.
 
 ## 🚨 Abstract
 
